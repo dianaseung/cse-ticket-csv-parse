@@ -14,3 +14,16 @@ print(df.to_string())
 # To see datatypes of columns
 # print('DataType Info')
 # print(df.info())
+
+
+# Next Step is to check status
+# and conditionally return new values based on Requested or Updated values
+
+# By default, Next Due Date will be set to 2 days from Requested date
+# These values hold true for Updater=='Agent'
+df['Next Due Date'] = df['Requested'] + np.timedelta64(2,'D')
+
+df.loc[df['Status'].str.strip()=='New', 'Next Due Date'] = df['Requested']
+df.loc[df['Status'].str.strip()=='Open', 'Next Due Date'] = df['Updated'] + np.timedelta64(2,'D')
+df.loc[df['Status'].str.strip()=='Pending', 'Next Due Date'] = df['Updated'] + np.timedelta64(2,'D')
+df.loc[df['Status'].str.strip()=='Solved', 'Next Due Date'] = 0
