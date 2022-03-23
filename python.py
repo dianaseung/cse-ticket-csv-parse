@@ -43,3 +43,17 @@ df['Help Center Link'] = 'https://liferay-support.zendesk.com/agent/tickets/' + 
 print('---')
 print('Modified DataFrame')
 print(df.to_string())
+
+# Generate new CSV file called test_formatted.csv
+# in folder ./formatted/
+# with index removed in utf-8 encoding
+df.to_csv('./formatted/test_formatted.csv', index=False, encoding='utf-8')
+
+# Next steps to consider:
+# -- 
+# Wildcard grab (all?) raw CSV file from a ./raw/ directory
+# and auto-generate modified CSV into ./foramtted/ directory
+# Reference: https://www.geeksforgeeks.org/how-to-read-all-csv-files-in-a-folder-in-pandas/
+# --
+# Or possibly make file name a variable that I can set either at the top or in .env
+# such as if original file is /{var}.csv, the outputted would be /raw/formatted_{var}.csv
