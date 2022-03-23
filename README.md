@@ -7,6 +7,24 @@
 Python script to parse CSV exports from ZenDesk to prepare for import into Google Sheets for mandatory CSE Ticket Spreadsheet usage.
 Requirements for use include having a proper ZenDesk view setup for proper CSV export.
 
+## Recommended ZenDesk View Setup
+Recommended Conditions:
+Tickets must meet all of these conditions to appear in the view:
+-  Assignee is (Self)
+
+Recommended formatting column for proper CSV export (in descending order):
+- ID
+- Priority
+- Heat Score
+- Subject
+- Request date
+- Latest update
+- Latest updater type(agent/end user)
+
+Recommended Group by: Status (Ascending)
+Recommended Order by: Request date (Descending)
+
+
 ## Installation / Usage
 
 ### Prerequisites:
