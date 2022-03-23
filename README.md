@@ -27,6 +27,15 @@ Recommended Order by: Request date (Descending)
 
 ## Installation / Usage
 
+### [Running Python on Windows](https://docs.python.org/3/faq/windows.html)
+0. Open Command-Line CMD (win+R, 'cmd') and type 'py' to verify Python version.  Type exit() to exit Python interface.
+1. Navigate to directory containing the python script in cmd.
+2. Start the script with 
+```
+C:\Users\YourName\Desktop\> py cse-ticket-csv-parse/python.py
+```
+
+
 ### Prerequisites:
 - Python 3.10
 - PIP
