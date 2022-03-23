@@ -30,4 +30,8 @@ df.loc[df['Status'].str.strip()=='Solved', 'Next Due Date'] = 0
 
 # Next step would be if Update=='Agent'
 # But I'm not sure if it really changes anything because we would still want to follow-up within X days
-# Double check timelines
+# Double check timelines before working on this portion
+
+# Auto-generate 'Help Center Link' URL based off Ticket 'ID'
+df['Help Center Link'] = 'https://liferay-support.zendesk.com/agent/tickets/' + df['ID'].astype(str)
+
