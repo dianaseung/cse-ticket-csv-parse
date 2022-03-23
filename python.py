@@ -5,6 +5,9 @@ import numpy as np
 df = pd.read_csv('test.csv',
     parse_dates=['Requested','Updated'])
 
+# To Drop Columns without changing the original CSV:
+# newdf = df.drop(columns = ['Next SLA breach'])
+
 # Use to_string() to print the entire DataFrame
 # without .to_string(), Pandas will only return the first + last 5 rows
 print('Initial DataFrame')
@@ -34,4 +37,3 @@ df.loc[df['Status'].str.strip()=='Solved', 'Next Due Date'] = 0
 
 # Auto-generate 'Help Center Link' URL based off Ticket 'ID'
 df['Help Center Link'] = 'https://liferay-support.zendesk.com/agent/tickets/' + df['ID'].astype(str)
-
