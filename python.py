@@ -9,3 +9,8 @@ df = pd.read_csv('test.csv',
 # without .to_string(), Pandas will only return the first + last 5 rows
 print('Initial DataFrame')
 print(df.to_string())
+
+
+# To see datatypes of columns
+# print('DataType Info')
+# print(df.info())
