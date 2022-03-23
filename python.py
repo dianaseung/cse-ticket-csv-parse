@@ -37,3 +37,9 @@ df.loc[df['Status'].str.strip()=='Solved', 'Next Due Date'] = 0
 
 # Auto-generate 'Help Center Link' URL based off Ticket 'ID'
 df['Help Center Link'] = 'https://liferay-support.zendesk.com/agent/tickets/' + df['ID'].astype(str)
+
+
+# Render Modified CSV to check if new columns correctly generated
+print('---')
+print('Modified DataFrame')
+print(df.to_string())
