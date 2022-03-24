@@ -5,9 +5,12 @@
 <a href="https://github.com/dianaseung/cse-ticket-csv-parse/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/dianaseung/cse-ticket-csv-parse"></a>
 
 Python script to parse CSV exports from ZenDesk to prepare for import into Google Sheets for mandatory CSE Ticket Spreadsheet usage.
-Requirements for use include having a proper ZenDesk view setup for proper CSV export.
+Requirements for use include having a proper ZenDesk view setup for proper CSV export. Work in Progress
 
 ## Recommended ZenDesk View Setup
+(*Current configurations, subject to change as I figure out how best to automate importing updates*)
+
+
 Recommended Conditions:
 Tickets must meet all of these conditions to appear in the view:
 -  Assignee is (Self)
@@ -50,4 +53,5 @@ To use this in a Linux environment, you will need to:
 ## Next Steps
 
 - Inquire into auto-generated CSV export 
+- Consider best practice for importing new CSV to update ticket spreadsheet without overriding existing values I'd like to preserve
 - (GET API for ZenDesk is not available) - not a viable solution
