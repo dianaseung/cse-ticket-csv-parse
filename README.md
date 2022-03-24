@@ -30,6 +30,13 @@ Recommended Order by: Request date (Descending)
 
 ## Installation / Usage
 
+
+### Prerequisites:
+- Python 3.10
+- PIP
+- IDLE
+- If using IDE such as VS Code, you can install Jupyter extension
+
 ### [Running Python on Windows](https://docs.python.org/3/faq/windows.html)
 0. Open Command-Line CMD (win+R, 'cmd') and type 'py' to verify Python version.  Type exit() to exit Python interface.
 1. Navigate to directory containing the python script in cmd.
@@ -38,14 +45,25 @@ Recommended Order by: Request date (Descending)
 C:\Users\YourName\Desktop\> py cse-ticket-csv-parse/python.py
 ```
 
+### Running Python on Linux systems
+WIP
 
-### Prerequisites:
-- Python 3.10
-- PIP
-- IDLE
-- If using IDE such as VS Code, you can install Jupyter
 
-To use this in a Linux environment, you will need to:
+## Current Plan for Ticket Spreadsheet Workflow - Work on more automation in steps
+(Setup custom ZenDesk view as detailed above)
+
+1. Export CSV from All My Tickets view -> Download CSV from email
+  - Point of improvement: IS possibly working on auto-generating CSV export for URL grab
+2. Place CSV in folder with `parse_csv.py` 
+  - Point of improvement: make it so that parse_csv.py will wildcard grab any *.csv files in folder to parse into formatted
+3. Run `parse_csv.py`
+  - Point of improvement: Possibly make .bat file instead to make it easier to run?
+4. Open existing (Google Spreadsheet) Ticket Spreadsheet
+5. Import
+  - Current issues: Order of tickets change due to current ordering by Status.  This would override 
+  - Possible solution: I may need to change the custom view to not group by Status, and list purely chronologically (ascending) to retain ticket order. 
+  This would allow you to Import and Replace just the Status, dates (Requested, Updated, Due Date), Updater for previously existing tickets and retain Repro/Branch/Master/Jira/Hotfix columns in place.  For any new tickets, all columns would be auto-generated except Action Item (must manually update this one, sorry :) )
+  - Potential issues with solution: [Need to investigate] Would filtering and sorting affect order for replacement? (is filter/sort a hard sort or a soft sort?)
 
 
 
