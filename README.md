@@ -25,8 +25,16 @@ Recommended formatting column for proper CSV export (in descending order):
 - Latest updater type(agent/end user)
 
 Recommended Group by: Status (Ascending)
+
 Recommended Order by: Request date (Descending)
 
+
+*Consider instead:*
+Recommended Group by: (No group)*
+
+Recommended Order by: Request date (Ascending)
+
+`* use Google Sheets filter view instead`
 
 ## Installation / Usage
 
@@ -44,9 +52,11 @@ Recommended Order by: Request date (Descending)
 ```
 C:\Users\YourName\Desktop\> py cse-ticket-csv-parse/python.py
 ```
+(Note: This instruction may not be needed if I create a .bat file to run the script instead.)
 
 ### Running Python on Linux systems
 WIP
+(I am just running with Jupyter extension on VS code at the moment, but I plan on making a .bat file instead.)
 
 
 ## Current Plan for Ticket Spreadsheet Workflow - Work on more automation in steps
