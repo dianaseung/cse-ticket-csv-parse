@@ -53,16 +53,16 @@ WIP
 (Setup custom ZenDesk view as detailed above)
 
 1. Export CSV from `All My Tickets` view -> Download CSV from email
-    - Point of improvement: IS possibly working on auto-generating CSV export for URL grab
+    - **Point of improvement**: IS possibly working on auto-generating CSV export for URL grab
 2. Place CSV in folder with `parse_csv.py` 
-   - Point of improvement: make it so that parse_csv.py will wildcard grab any *.csv files in folder to parse into /formatted/ directory
+    - **Point of improvement**: make it so that parse_csv.py will wildcard grab any *.csv files in folder to parse into /formatted/ directory
 3. Run `parse_csv.py`
-   - Point of improvement: Possibly make .bat file instead to make it easier to run?
+    - **Point of improvement**: Possibly make .bat file instead to make it easier to run?
 4. Open existing (Google Spreadsheet) Ticket Spreadsheet and File > Import ... (Replace data at selected cell; detect automatically)
-   - Current issues: Order of tickets change due to current ordering by Status.  This would override 
-   - Possible solution: I may need to change the custom view to not group by Status, and list purely chronologically (ascending) to retain ticket order. 
+    - **Current issues**: The strict order of tickets would change due to the current ordering by Status option => cause new data override in an undesired manner and mix old ticket data with new ticket data. 
+    - **Possible solution**: I may need to change the custom view to not group by Status, and list purely chronologically (ascending) to retain ticket order. 
   This would allow you to Import and Replace just the Status, dates (Requested, Updated, Due Date), Updater for previously existing tickets and retain Repro/Branch/Master/Jira/Hotfix columns in place.  For any new tickets, all columns would be auto-generated except Action Item (must manually update this one, sorry :) )
-   - Potential issues with solution: [Need to investigate] Would filtering and sorting affect order for replacement? (is filter/sort a hard sort or a soft sort?)
+    - *Potential issues with solution*: [Need to investigate] Would filtering and sorting affect order for replacement? (is filter/sort a hard sort or a soft sort?)
 
 
 
